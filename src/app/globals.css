@@ -41,10 +41,15 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --brand-primary-color: #9564F8;
+  --brand-primary-color-hover: #7a4ee0;
+  --brand-secondary-color: #c6ff00;
 }
 
 body {
   font-family: Poppins, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 :root {
@@ -117,6 +122,30 @@ body {
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 } */
+
+
+@keyframes beam-slide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.border-beam {
+  position: relative;
+  border-radius: 9999px;
+  padding: 1px;
+  background: linear-gradient(
+    35deg,
+    transparent,
+    var(--brand-primary-color),
+    var(--brand-secondary-color),
+    var(--brand-primary-color),
+    var(--brand-secondary-color),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: beam-slide 4s linear infinite;
+}
+
 
 @layer base {
   * {

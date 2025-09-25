@@ -1,7 +1,7 @@
 // src/lib/api/branding.ts
 export async function getBranding() {
-    const domain = '.zetexa.com';
-    const subdomain = 'web-stg';
+    const domain = '.ut.zetexa.com';
+    const subdomain = 'web';
     
     const url = `${process.env.NEXT_PUBLIC_CUSTOMER_API}${process.env.NEXT_PUBLIC_API_V2}/get-branding-details?domain=${domain}&subdomain=${subdomain}`;
 
